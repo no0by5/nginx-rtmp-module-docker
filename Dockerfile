@@ -14,5 +14,4 @@ RUN mkdir /app \
 
 COPY nginx.conf /usr/local/nginx/conf/nginx.conf
 
-ENTRYPOINT ["/usr/local/gninx/sbin/nginx"]
-CMD ["-g", "daemon off;"]
+ENTRYPOINT ["/usr/local/nginx/sbin/nginx"]
