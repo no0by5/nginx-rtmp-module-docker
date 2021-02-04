@@ -4,6 +4,9 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
+    restart: always
+    depends_on:
+      - rtmp-auth
     ports:
       - "1935:1935"
 
@@ -11,6 +14,7 @@ services:
     build:
       context: .
       dockerfile: rtmp-auth.dockerfile
+    restart: always
     ports:
       - "8082:8000"
     volumes:
