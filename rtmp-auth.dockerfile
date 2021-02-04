@@ -14,5 +14,5 @@ RUN git clone https://github.com/voc/rtmp-auth \
 EXPOSE 8000
 EXPOSE 8001
 
-ENTRYPOINT /go/rtmp-auth/rtmp-auth -app "rtmp" -frontendAddr ":8000" -apiAddr ":8001" -insecure
+ENTRYPOINT /go/rtmp-auth/rtmp-auth -app "rtmp" -frontendAddr ":8000" -apiAddr ":8001" -store "/store/store.db" -insecure
 
